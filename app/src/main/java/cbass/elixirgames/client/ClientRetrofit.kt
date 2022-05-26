@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ClientRetrofit {
 
     companion object{
-        val base_url= "https://my-json-server.typicode.com/himuravidal/gamesDB/"
+        val BASE_URL= "https://my-json-server.typicode.com/himuravidal/gamesDB/"
         private var client: Retrofit? = null
 
         fun getInstance(baseUrl:String): GamesService

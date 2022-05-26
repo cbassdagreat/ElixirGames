@@ -55,9 +55,16 @@ class GameAdapter : RecyclerView.Adapter<GameAdapter.CustomViewHolder>() {
         lista = games
         notifyDataSetChanged()
     }
-}
 
 interface MiListener {
     fun miOnClick(gamesItem: GamesItem)
+}
+
+fun setMilistener(listener: MiListener) {
+
+    this.listener=listener
+
+}
+
 
 }

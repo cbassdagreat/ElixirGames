@@ -12,13 +12,17 @@ class ClientRetrofit {
 
         fun getInstance(baseUrl:String): GamesService
         {
-            if (client == null)
+
+            val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
+
+            return retrofit.create(GamesService::class.java)
+           /** if (client == null)
             {
                 client = Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).build()
             }
 
             return client!!.create(GamesService::class.java)
-
+**/
         }
     }
 }
